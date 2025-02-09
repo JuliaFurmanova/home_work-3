@@ -1,11 +1,11 @@
 from selene import browser, be, have
 
 
-def test_first(setting_browser):
+def test_first():
     browser.open("https://www.google.com/")
 
 
-def test_second(setting_browser):
+def test_second():
     browser.open("https://www.google.com/")
 
 
