@@ -5,7 +5,7 @@ def test_first():
     browser.open("https://www.google.com/")
 
 
-def test_second():
+def test_second(setting_browser):
     browser.open("https://www.google.com/")
 
 
