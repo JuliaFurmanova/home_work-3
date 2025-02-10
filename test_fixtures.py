@@ -1,12 +1,14 @@
+import pytest
 from selene import browser, be, have
 
 
-def test_first():
+@pytest.fixture(autouse=True)
+def setting_browser():
+    browser.config.window_height = 1080
+    browser.config.window_width = 1920
     browser.open("https://www.google.com/")
-
-
-def test_second(setting_browser):
-    browser.open("https://www.google.com/")
+    yield
+    browser.quit()
 
 
 def test_sucsess_search():
